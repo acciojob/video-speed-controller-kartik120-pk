@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const rewindButton = document.querySelector(".rewind");
     const forwardButton = document.querySelector(".forward");
 
+    // Ensure video loads properly
+    video.addEventListener("loadeddata", () => {
+        console.log("Video is loaded");
+    });
+
     // Toggle Play/Pause
     function togglePlay() {
         if (video.paused) {
